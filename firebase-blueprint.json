@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "CropScan": {
+      "title": "Crop Scan",
+      "description": "Record of a crop scan performed by a user.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who performed the scan."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "The URL of the scanned image (potentially placeholder if not storing images, or actual URL if using storage)."
+        },
+        "analysis": {
+          "type": "string",
+          "description": "The diagnostic result from Gemini."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the scan was performed."
+        },
+        "cropName": {
+          "type": "string",
+          "description": "Detected crop name."
+        },
+        "health": {
+          "type": "string",
+          "description": "Health status of the crop."
+        }
+      },
+      "required": ["userId", "analysis", "createdAt"]
+    }
+  },
+  "firestore": {
+    "scans": {
+      "schema": "CropScan",
+      "description": "Collection of all crop scans."
+    }
+  }
+}

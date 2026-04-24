@@ -1,0 +1,6 @@
+{
+  "name": "Krushi Mitra",
+  "description": "A modern, mobile-friendly agriculture app UI with AI-powered features for farmers, featuring crop scanning, voice assistance, and weather updates.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": []
+}
